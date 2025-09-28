@@ -4,7 +4,7 @@ egrep_clone.py — DAAR Projet 1: offline regex search (subset of ERE)
 Supported operators: (), |, concatenation (implicit), *, ., ASCII letters.
 
 Usage:
-  python egrep_clone.py PATTERN FILE
+  python3 egrep_clone.py PATTERN FILE
 
 This prototype compiles PATTERN to an NFA (Thompson), converts to DFA (subset),
 minimizes via Hopcroft, and searches each line for a substring match (Σ* R Σ*).
@@ -428,7 +428,7 @@ def grep_file(pattern: str, path: str):
 
 def main(argv):
     if len(argv) != 3:
-        print("Usage: python egrep_clone.py PATTERN FILE", file=sys.stderr)
+        print("Usage: python3 egrep_clone.py PATTERN FILE", file=sys.stderr)
         return 2
     pattern, path = argv[1], argv[2]
     try:

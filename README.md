@@ -13,7 +13,7 @@ Ce dépôt vous fournit :
 
 ```bash
 # Lister les lignes de FILE qui contiennent un motif PATTERN
-python src/egrep_clone.py 'S(a|g|r)+on' path/to/file.txt
+python3 src/egrep_clone.py 'S(a|g|r)+on' path/to/file.txt
 ```
 
 **Remarque :** pour l’instant, l’opérateur `+` n’est pas supporté ; remplacez-le par `aa*` si nécessaire (ex. `x+` ↦ `xx*`).
@@ -23,7 +23,7 @@ python src/egrep_clone.py 'S(a|g|r)+on' path/to/file.txt
 ```bash
 # exemple rapide (fournissez votre propre fichier)
 egrep 'ab*a' tests/demo.txt
-python src/egrep_clone.py 'ab*a' tests/demo.txt
+python3 src/egrep_clone.py 'ab*a' tests/demo.txt
 ```
 
 ## Performance
