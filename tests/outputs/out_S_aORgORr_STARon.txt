@@ -1,0 +1,4 @@
+tests/les_miserables.txt:30834:Songs are like the guillotine; they chop away indifferently, to-day
+tests/les_miserables.txt:55575:Son bonnet charmant est à peine éclos.
+tests/les_miserables.txt:63139:Pierre-à-Poisson through the sewer de la Sonnerie, the Rue Popincourt,
+tests/les_miserables.txt:67661:with the delights of the Song of Songs. People had not yet grasped to

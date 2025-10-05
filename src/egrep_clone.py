@@ -507,6 +507,7 @@ class Engine:
             nfa = add_search_wrappers(nfa)
             dfa = determinize(nfa)
             self.dfa = hopcroft_minimize(dfa)
+            print(f"[DEBUG] NFA: {nfa.states} états, DFA: {len(dfa.states_rev)}, DFA min: {len(self.dfa.states_rev)}", file=sys.stderr)
 
     def match_line(self, line: bytes) -> bool:
         """
