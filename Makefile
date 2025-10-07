@@ -19,13 +19,13 @@ test:
 
 # ==== Test KMP : motifs littéraux sans opérateurs ====
 test-kmp:
-	@echo "\033[1;32m===============================================\033[0m"
-	@echo "\033[1;32m== Démo locale : mode KMP (recherche littérale) ==\033[0m"
-	@echo "\033[1;32m===============================================\033[0m"
-	$(PY) $(APP) 'bonjour' tests/demo.txt || true
-	$(PY) $(APP) 'Alice' tests/demo.txt || true
-	$(PY) $(APP) 'Paris' tests/demo.txt || true
-	@echo ""
+	@echo "==============================================="
+	@echo "== Démo locale : mode KMP (recherche littérale) =="
+	@echo "==============================================="
+	$(PY) $(APP) 'alpha'  tests/demo.txt || true
+	$(PY) $(APP) 'abba'   tests/demo.txt || true
+	$(PY) $(APP) 'Sargon' tests/demo.txt || true
+	$(PY) $(APP) 'Saon'   tests/demo.txt || true
 
 # ==== Test global (Automate + KMP) ====
 test-all: test test-kmp
