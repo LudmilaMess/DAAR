@@ -13,7 +13,7 @@ et recherche chaque ligne du fichier pour une correspondance de sous-chaîne (Σ
 Si le motif est un littéral simple (lettres ASCII uniquement), il utilise KMP.
 """
 
-import sys
+import time, sys
 from collections import defaultdict, deque
 
 ANY = None  # symbole générique pour '.' et '.*'
@@ -533,7 +533,6 @@ class Engine:
             # mais on choisit de continuer jusqu’à la fin pour fiabilité.
         return s in self.dfa.accepts
 
-
 def grep_file(pattern: str, path: str):
     """
     Fonction utilitaire qui parcourt un fichier et affiche
@@ -541,6 +540,7 @@ def grep_file(pattern: str, path: str):
     """
     eng = Engine(pattern)
     count = 0
+    t0 = time.time()
     with open(path, 'rb') as f:
         for i, raw in enumerate(f, start=1):
             raw = raw.rstrip(b'\r\n')
@@ -552,8 +552,10 @@ def grep_file(pattern: str, path: str):
                     text = raw.decode('latin-1', errors='replace')
                 print(f"{path}:{i}:{text}")
                 count += 1
-    return count
+    t1 = time.time()
+    print(f"[DEBUG] Temps: {t1 - t0:.6f} s", file=sys.stderr)
 
+    return count
 
 def main(argv):
     """
