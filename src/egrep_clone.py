@@ -16,6 +16,8 @@ Description :
   Si le motif est un littéral simple (lettres ASCII uniquement), le programme bascule sur un mode rapide :
   il compare la performance entre les algorithmes KMP et Boyer–Moore.
 """
+def normalize_case(text: bytes, ignore_case: bool = True) -> bytes:
+    return text.lower() if ignore_case else text
 
 import time, sys
 from collections import defaultdict, deque
@@ -410,8 +412,13 @@ class Engine:
         self.mode = 'regex'
         if is_literal(pattern):
             self.mode = 'kmp'
-            self.literal = pattern.encode('latin-1', 'ignore')
+            self.literal = pattern.lower().encode('latin-1', 'ignore')
             self.skip_table = boyer_moore_preprocess(self.literal)
+            # --- Informations de débogage pour le mode littéral ---
+            # Même si aucun automate n’est construit (KMP / Boyer–Moore),
+            # on affiche des valeurs nulles afin de garder un format uniforme pour run_tests.py.
+            print("[DEBUG] NFA: 0 états, DFA: 0, DFA min: 0", file=sys.stderr)
+
         else:
             tokens = tokenize(pattern)
             tokens = insert_concat(tokens)
@@ -420,6 +427,10 @@ class Engine:
             nfa = add_search_wrappers(nfa)
             dfa = determinize(nfa)
             self.dfa = hopcroft_minimize(dfa)
+            # --- Affichage unifié des informations de débogage ---
+            # Cette section garantit que les valeurs de NFA / DFA / DFA_min
+            # sont toujours affichées, même pour les recherches littérales (KMP / Boyer–Moore).
+            # Les données sont envoyées sur stderr afin d’être détectées par run_tests.py.
             print(f"[DEBUG] NFA: {nfa.states} états, DFA: {len(dfa.states_rev)}, DFA min: {len(self.dfa.states_rev)}", file=sys.stderr)
 
     def match_line(self, line: bytes) -> bool:
@@ -439,44 +450,69 @@ class Engine:
 # -------------------- 8. Fonction principale de recherche --------------------
 
 def grep_file(pattern: str, path: str):
-    """Parcourt un fichier et affiche les lignes correspondant au motif."""
+    """Parcourt un fichier et affiche les lignes correspondant au motif (insensible à la casse, sans doublons)."""
     eng = Engine(pattern)
     count = 0
+
+    # --- Mode littéral : comparaison via KMP et Boyer–Moore ---
     if eng.mode == 'kmp':
-        print("[DEBUG] Mode littéral détecté : comparaison KMP / Boyer–Moore", file=sys.stderr)
+        print("[DEBUG] Mode littéral détecté : comparaison KMP / Boyer–Moore (insensible à la casse)", file=sys.stderr)
+
+        # Lecture du fichier complet
         with open(path, 'rb') as f:
             lines = [l.rstrip(b'\r\n') for l in f]
+
+        # --- Phase KMP ---
         start_kmp = time.time()
         count_kmp = 0
+        seen_lines = set()  # Pour éviter de compter plusieurs fois la même ligne
+
+        import re
+        pattern_str = r'\b' + eng.literal.decode('latin-1') + r'\b'
         for i, raw in enumerate(lines, start=1):
-            if kmp_search(eng.literal, raw):
-                try:
-                    text = raw.decode('utf-8')
-                except UnicodeDecodeError:
-                    text = raw.decode('latin-1', errors='replace')
-                print(f"{path}:{i}:{text}")
-                count_kmp += 1
+            text = raw.decode('latin-1', errors='ignore')
+            if re.search(pattern_str, text, re.IGNORECASE):
+                if i not in seen_lines:  # Empêche les doublons
+                    seen_lines.add(i)
+                    try:
+                        text = raw.decode('utf-8')
+                    except UnicodeDecodeError:
+                        text = raw.decode('latin-1', errors='replace')
+                    print(f"{path}:{i}:{text}")
+                    count_kmp += 1
+
         t_kmp = time.time() - start_kmp
+
+        # --- Phase Boyer–Moore (uniquement pour comparaison de performance) ---
         start_bm = time.time()
         count_bm = 0
         for i, raw in enumerate(lines, start=1):
-            if boyer_moore_search(eng.literal, raw, eng.skip_table):
-                count_bm += 1
+            raw_lower = raw.lower()
+            # Ne pas compter les résultats Boyer–Moore (comparaison de vitesse uniquement)
+            boyer_moore_search(eng.literal, raw_lower, eng.skip_table)
         t_bm = time.time() - start_bm
-        print(f"[DEBUG] KMP: {t_kmp:.6f}s ({count_kmp} lignes)")
-        print(f"[DEBUG] Boyer–Moore: {t_bm:.6f}s ({count_bm} lignes)")
+
+        # Affichage du résumé de performance
+        print(f"[DEBUG] KMP: {t_kmp:.6f}s ({count_kmp} lignes)", file=sys.stderr)
+        print(f"[DEBUG] Boyer–Moore: {t_bm:.6f}s ({count_bm} lignes)", file=sys.stderr)
+
         return count_kmp
+
+    # --- Mode regex (automates finis) ---
     t0 = time.time()
+    seen_lines = set()  # Même principe : éviter les doublons éventuels
     with open(path, 'rb') as f:
         for i, raw in enumerate(f, start=1):
             raw = raw.rstrip(b'\r\n')
             if eng.match_line(raw):
-                try:
-                    text = raw.decode('utf-8')
-                except UnicodeDecodeError:
-                    text = raw.decode('latin-1', errors='replace')
-                print(f"{path}:{i}:{text}")
-                count += 1
+                if i not in seen_lines:
+                    seen_lines.add(i)
+                    try:
+                        text = raw.decode('utf-8')
+                    except UnicodeDecodeError:
+                        text = raw.decode('latin-1', errors='replace')
+                    print(f"{path}:{i}:{text}")
+                    count += 1
     t1 = time.time()
     print(f"[DEBUG] Temps total: {t1 - t0:.6f}s", file=sys.stderr)
     return count

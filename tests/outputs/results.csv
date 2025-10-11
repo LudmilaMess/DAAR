@@ -1,0 +1,8 @@
+file,pattern,nfa,dfa,dfa_min,time,matches
+demo.txt,ab*a,?,?,?,0.017,0
+demo.txt,S(a|g|r)*on,?,?,?,0.017,0
+1.txt,the,?,?,?,0.017,0
+1.txt,independence,?,?,?,0.017,0
+les_miserables.txt,(a|b)*a,?,?,?,0.017,0
+les_miserables.txt,Monsieur le maire,?,?,?,0.017,0
+les_miserables.txt,....a,?,?,?,0.017,0
