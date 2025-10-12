@@ -1,64 +1,148 @@
-# DAAR Projet 1 — Clone de `egrep` (prototype Python)
-> Implémentation manuelle d’un moteur de recherche par expressions régulières fondé sur les automates finis.
+# Projet DAAR — Clone d’`egrep` avec KMP, Boyer–Moore et Automates Finis
 
-Ce projet s’inscrit dans le cadre du cours **DAAR (Développement des Algorithmes d'Application Réticulaire)**.  
-L’objectif est de reproduire le fonctionnement d’un moteur de recherche de motifs textuels semblable à `egrep`, en implémentant manuellement la chaîne théorique : **expression régulière → automate fini → minimisation → exécution**.
+## Présentation générale
 
-Le dépôt contient :
-- un prototype Python fonctionnel (`src/egrep_clone.py`) implémentant la chaîne : RegEx → NFA (Thompson) → DFA (sous-ensembles) → minimisation (Hopcroft), et un raccourci KMP pour les motifs purement littéraux ;
-- un gabarit de rapport (`report/rapport_template.md`) aligné avec l’énoncé ;
-- un `Makefile` pour exécuter des tests locaux et générer une archive de rendu.
+Ce projet a été réalisé dans le cadre du module **DAAR (Développement et Analyse d’Algorithmes de Recherche)**.  
+Il a pour objectif de concevoir un moteur de recherche textuelle inspiré de la commande Unix `egrep`, capable d’analyser de grands fichiers texte en appliquant différentes stratégies de recherche :
 
-> ⚠️ Portée des ERE supportées : parenthèses `()`, alternative `|`, concaténation (implicite), étoile `*`, point `.`, lettres ASCII. Les autres métacaractères ne sont pas traités.
+- **Moteur à base d’automates finis** :  
+  Construction d’un automate **NFA (Thompson)**, déterminisation en **DFA**, puis **minimisation (Hopcroft)**.  
+- **Recherche optimisée pour motifs littéraux** :  
+  Utilisation des algorithmes **Knuth–Morris–Pratt (KMP)** et **Boyer–Moore** (règle du mauvais caractère).
 
-## Utilisation rapide
+Le projet compare les performances, la complexité et la précision des trois approches.
 
+---
+
+## Architecture du projet
+
+```
+DAAR-Liu/
+├── src/
+│   └── egrep_clone.py          # Moteur principal : NFA, DFA, KMP, Boyer–Moore
+├── tests/
+│   ├── run_tests.py            # Script d’exécution et de mesure
+│   ├── plot_results.py         # Génération des graphiques comparatifs
+│   └── outputs/                # Résultats et graphiques produits
+├── results.csv                 # Données expérimentales (export)
+├── Rapport_DAAR_Ludmila_Messaoudi.docx  # Rapport complet du projet
+├── Makefile                    # Automatisation (tests, nettoyage)
+└── README.md                   # Ce fichier
+```
+- **src/** — moteur principal et algorithmes (NFA, DFA, KMP, Boyer–Moore)
+- **tests/** — scripts d’évaluation et de visualisation des résultats
+- **results.csv** — enregistrement automatique des mesures de performance
+- **Makefile** — automatisation des tests et nettoyage du projet
+
+
+---
+
+## Exécution du moteur `egrep_clone.py`
+
+### Recherche d’un motif
 ```bash
-# Lister les lignes de FILE qui contiennent un motif PATTERN
-python src/egrep_clone.py 'S(a|g|r)*on' path/to/file.txt
+python3 src/egrep_clone.py "S(a|g|r)*on" tests/demo.txt
+```
+Sortie typique :
+```
+[DEBUG] NFA: 28 états, DFA: 7, DFA min: 4
+tests/demo.txt:6:Sargon
+tests/demo.txt:7:Saon
+[DEBUG] Temps total: 0.000157s
 ```
 
-**Remarque :** Sur macOS (et sur certaines distributions Linux récentes), la commande `python` peut être absente.
-Dans ce cas, utilisez `python3` à la place :
+### Mode littéral (KMP / Boyer–Moore)
 ```bash
-python3 src/egrep_clone.py 'S(a|g|r)*on' path/to/file.txt
+python3 src/egrep_clone.py "Sargon" tests/demo.txt
+```
+Sortie :
+```
+[DEBUG] NFA: 0 états, DFA: 0, DFA min: 0
+[DEBUG] Mode littéral détecté : comparaison KMP / Boyer–Moore (insensible à la casse)
+tests/demo.txt:6:Sargon
+[DEBUG] KMP: 0.003353s (1 lignes)
+[DEBUG] Boyer–Moore: 0.000006s (1 lignes)
 ```
 
-## Validation simple vs `egrep`
+---
 
+## Tests automatisés
+
+Pour lancer tous les tests définis :
 ```bash
-# exemple rapide (fournissez votre propre fichier)
-egrep 'ab*a' tests/demo.txt
-python3 src/egrep_clone.py 'ab*a' tests/demo.txt
-
-# sortie attendue
-tests/demo.txt:3:abba
-tests/demo.txt:4:aaaaa
-tests/demo.txt:5:bababa
+python3 tests/run_tests.py
 ```
 
-## Performance
+Le script :
+- Exécute plusieurs motifs sur différents fichiers (dont *Les Misérables*).  
+- Mesure les **temps d’exécution**, le **nombre d’états** (NFA, DFA, DFAmin) et le **nombre de lignes correspondantes**.  
+- Enregistre tout dans `results.csv`.  
 
-- Si votre motif est **purement littéral**, le programme bascule sur **KMP** automatiquement.
-- Pour les autres motifs, la recherche se fait via **DFA minimisé**, avec encapsulation du motif en `Σ* R Σ*` afin de faire un **substring match** comme `egrep`.
-- Ce comportement garantit des performances quasi linéaires, similaires à celles d’`egrep`,  
-  tout en conservant une implémentation purement algorithmique sans bibliothèque externe.
+### Exemple de résultats
+| Fichier | Motif | NFA | DFA | DFAmin | Temps (s) | Lignes |
+|:--------|:------|----:|----:|-------:|-----------:|-------:|
+| demo.txt |ab*a | 14 | 4 | 3 | 0.024 | 3 |
+| demo.txt |S(a\|g\|r)*on | 28 | 7 | 4 | 0.025 | 2 |
+| 1.txt |the | 0 | 0 | 0 | 0.026 | 233 |
+| 1.txt |independence | 0 | 0 | 0 | 0.045 | 8 |
+| les_miserables.txt |(a\|b)*a | 18 | 3 | 2 | 0.410 | 1340 |
+| les_miserables.txt |Monsieur le maire | 0 | 0 | 0 | 0.166 | 48 |
+| les_miserables.txt |....a | 14 | 6 | 6 | 0.404 | 1340 |
 
-## Packaging du rendu
+---
 
-L’exécution principale se trouve dans `src/egrep_clone.py`, le Makefile propose des cibles pratiques :
+## Visualisation des résultats
 
+Pour générer les graphiques comparatifs :
 ```bash
-make test          # lance une ou deux démos locales
-make zip           # produit daar-projet-offline-VOTRE_NOM.zip (remplacez VOTRE_NOM)
+python3 tests/plot_results.py
 ```
 
-Pour un rendu conforme à l’énoncé, ajoutez :
-- un **binaire** (ex. via PyInstaller) *ou* fournissez votre propre implémentation C++/Java avec Makefile/Ant ;
-- un **README** (ce fichier), le **rapport** (5–10 pages), le **code commenté**, un **Makefile**, et un répertoire d’**instances de test**.
+Trois fichiers sont créés dans `tests/outputs/` :
+- **execution_comparative.png** → Temps d’exécution des trois approches (DFA / KMP / Boyer–Moore).  
+- **states_comparison.png** → Comparaison du nombre d’états (NFA, DFA, DFAmin).  
+- **matches_count.png** → Nombre de lignes trouvées par motif.
 
-## Pistes d’amélioration
+---
 
-- Ajouter `+`, `?`, quantificateurs bornés `{m,n}` si souhaité (hors périmètre minimal).
-- Support de classes de caractères, ancrages, etc.
-- Optimisations mémoire/temps (compression du DFA, alphabet restreint dynamique, etc.).
+## Principaux algorithmes utilisés
+
+| Algorithme | Rôle | Complexité | Description |
+|-------------|------|-------------|--------------|
+| **Thompson** | NFA | O(m) | Construction de l’automate non déterministe. |
+| **Méthode des sous-ensembles** | DFA | O(2^m) | Déterminisation du NFA. |
+| **Hopcroft** | Minimisation DFA | O(n log n) | Réduction du nombre d’états. |
+| **KMP** | Recherche littérale | O(n + m) | Recherche linéaire avec préfixe/suffixe. |
+| **Boyer–Moore** | Recherche littérale | O(n/m) en pratique | Sauts par mauvaise correspondance. |
+
+---
+
+## Analyse synthétique
+
+- **Boyer–Moore** est le plus rapide pour les motifs simples sur de grands fichiers.  
+- **KMP** offre une performance linéaire et régulière.  
+- **DFA** est plus coûteux à compiler mais constant en temps d’exécution une fois construit.  
+- La **minimisation** réduit jusqu’à 70 % des états.  
+
+**En conclusion**, ce projet illustre la complémentarité entre les approches **formelles (automates)** et **algorithmiques (KMP, Boyer–Moore)** pour la recherche efficace de motifs dans de grands corpus textuels.
+
+
+
+---
+
+## Références
+
+- Hopcroft, J. E., Motwani, R., & Ullman, J. D. *Introduction to Automata Theory, Languages, and Computation.*  
+- Knuth, D. E., Morris, J. H., & Pratt, V. R. *Fast Pattern Matching in Strings.* (1977)  
+- Boyer, R. S., & Moore, J. S. *A Fast String Searching Algorithm.* (1977)  
+- Cours DAAR – Université de Haute-Alsace, 2024–2025.  
+- Documentation Python 3.14 — https://docs.python.org/3/
+
+---
+
+## Auteur
+
+- **Ludmila Messaoudi, Liu YANG**  
+Sorbonne Université - Master 2 Informatique Parcours Science et Technologie du Logiciel en alternance 
+
+Projet réalisé dans le cadre du module **DAAR (Développement et Analyse d’Algorithmes de Recherche)**.

@@ -483,13 +483,13 @@ def grep_file(pattern: str, path: str):
 
         t_kmp = time.time() - start_kmp
 
-        # --- Phase Boyer–Moore (uniquement pour comparaison de performance) ---
+        # --- Phase Boyer–Moore (pour comparaison de performance ET comptage) ---
         start_bm = time.time()
         count_bm = 0
         for i, raw in enumerate(lines, start=1):
             raw_lower = raw.lower()
-            # Ne pas compter les résultats Boyer–Moore (comparaison de vitesse uniquement)
-            boyer_moore_search(eng.literal, raw_lower, eng.skip_table)
+            if boyer_moore_search(eng.literal, raw_lower, eng.skip_table):
+                count_bm += 1
         t_bm = time.time() - start_bm
 
         # Affichage du résumé de performance
