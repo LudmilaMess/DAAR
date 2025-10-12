@@ -1,0 +1,3 @@
+tests/demo.txt:3:abba
+tests/demo.txt:4:aaaaa
+tests/demo.txt:5:bababa

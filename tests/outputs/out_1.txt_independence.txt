@@ -1,0 +1,8 @@
+tests/1.txt:1:﻿The Project Gutenberg eBook of The Declaration of Independence of the United States of America
+tests/1.txt:11:Title: The Declaration of Independence of the United States of America
+tests/1.txt:23:*** START OF THE PROJECT GUTENBERG EBOOK THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA ***
+tests/1.txt:26:The United States Declaration of Independence was the first E-text
+tests/1.txt:42:“facsimiles” of the Declaration of Independence are nary identical
+tests/1.txt:64:   the Declaration of Independence. This file previously
+tests/1.txt:82:THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA
+tests/1.txt:252:*** END OF THE PROJECT GUTENBERG EBOOK THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA ***

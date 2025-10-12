@@ -21,7 +21,7 @@ tests = [
 ]
 
 # === CSV de sortie pour plot_results.py ===
-csv_file = "results.csv"
+csv_file = os.path.join(output_dir, "results.csv")
 
 # === En-tête de la console ===
 print(f"{'Fichier':<22} {'Motif':<25} {'NFA':>6} {'DFA':>6} {'DFAmin':>8} {'Temps(s)':>10} {'Lignes':>10}")

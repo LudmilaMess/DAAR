@@ -1,0 +1,48 @@
+tests/les_miserables.txt:2286:“Monsieur le maire, it may be that it is of this very flock of wolves
+tests/les_miserables.txt:2314:“Monsieur le maire,” said the Bishop, “is that really all? I am not in
+tests/les_miserables.txt:8911:Monsieur Madeleine. Monsieur Madeleine became Monsieur le Maire.
+tests/les_miserables.txt:9012:“Monsieur le Maire, pray show us your chamber. It is said to be a
+tests/les_miserables.txt:10555:“This wretch has just insulted Monsieur le Maire.”
+tests/les_miserables.txt:10589:“I am sorry to oppose Monsieur le Maire; it is for the first time in my
+tests/les_miserables.txt:10591:authority. I confine myself, since Monsieur le Maire desires it, to the
+tests/les_miserables.txt:10596:in the world! In any case, Monsieur le Maire, this is a question of
+tests/les_miserables.txt:10619:“Monsieur le Maire, permit me—”
+tests/les_miserables.txt:11235:“Why, I thought that I had said to Monsieur le Maire that the case was
+tests/les_miserables.txt:11586:“In the second place—is the cabriolet for Monsieur le Maire?”
+tests/les_miserables.txt:11592:“Does Monsieur le Maire know how to drive?”
+tests/les_miserables.txt:11598:“Well, Monsieur le Maire will travel alone and without baggage, in
+tests/les_miserables.txt:11605:“But as Monsieur le Maire will have no one with him, he will be obliged
+tests/les_miserables.txt:11624:fatigue the horse. Monsieur le Maire must consent to travel in a little
+tests/les_miserables.txt:11637:“Has Monsieur le Maire reflected that we are in the middle of winter?”
+tests/les_miserables.txt:11658:“Of course, Monsieur le Maire,” replied Scaufflaire; then, scratching a
+tests/les_miserables.txt:11663:“But this is what I am thinking of now: Monsieur le Maire has not told
+tests/les_miserables.txt:11664:me where he is going. Where is Monsieur le Maire going?”
+tests/les_miserables.txt:11673:“Yes, Monsieur le Maire. You must hold him in a little when going down
+tests/les_miserables.txt:11694:“The one dragging the other, Monsieur le Maire,” said the Fleming, with
+tests/les_miserables.txt:11700:“Does Monsieur le Maire wish to purchase them or me?”
+tests/les_miserables.txt:11708:“Five hundred francs, Monsieur le Maire.”
+tests/les_miserables.txt:11722:devil could Monsieur le Maire be going?” They held counsel together.
+tests/les_miserables.txt:11750:“Is Monsieur le Maire ill? I thought he had a rather singular air.”
+tests/les_miserables.txt:12463:Monsieur le Maire; remain honorable and honored; enrich the town;
+tests/les_miserables.txt:12727:“I, Monsieur le Maire.”
+tests/les_miserables.txt:12735:“Monsieur le Maire, it is just five o’clock in the morning.”
+tests/les_miserables.txt:12741:“The cabriolet is here, Monsieur le Maire.”
+tests/les_miserables.txt:12753:“Did not Monsieur le Maire order a tilbury?”
+tests/les_miserables.txt:12758:“The coachman says that he has come for Monsieur le Maire.”
+tests/les_miserables.txt:12784:“What am I to say, Monsieur le Maire?”
+tests/les_miserables.txt:13699:Fantine, and said, “Monsieur le Maire has gone away.”
+tests/les_miserables.txt:15131:“Is not Monsieur le Maire going to have her child brought back to her?”
+tests/les_miserables.txt:15137:“If she were not to see Monsieur le Maire until that time,” went on the
+tests/les_miserables.txt:15138:sister, timidly, “she would not know that Monsieur le Maire had
+tests/les_miserables.txt:15140:the child arrived, she would naturally think Monsieur le Maire had just
+tests/les_miserables.txt:15154:“In that case, she is asleep; but Monsieur le Maire may enter.”
+tests/les_miserables.txt:15284:“Did you have a pleasant trip, Monsieur le Maire? Oh! how good you were
+tests/les_miserables.txt:15622:“Monsieur le Maire!” shrieked Fantine.
+tests/les_miserables.txt:15627:“There is no longer any Monsieur le Maire here!”
+tests/les_miserables.txt:15679:Madeleine! Monsieur le Maire!”
+tests/les_miserables.txt:15694:Monsieur le Maire. There is a thief, a brigand, a convict named Jean
+tests/les_miserables.txt:15855:“Good God, Monsieur le Maire,” she cried at last, “I thought you were—”
+tests/les_miserables.txt:15859:respect towards the beginning. Jean Valjean was still Monsieur le Maire
+tests/les_miserables.txt:15942:“Does not Monsieur le Maire desire to take a last look at that poor,
+tests/les_miserables.txt:23985:some little return for that! Save your life! Monsieur le Maire, dispose
+tests/les_miserables.txt:28733:Father Madeleine! Madeleine! Monsieur Madeleine! Monsieur le Maire! He

@@ -1,8 +1,8 @@
 file,pattern,nfa,dfa,dfa_min,time,matches
-demo.txt,ab*a,?,?,?,0.017,0
-demo.txt,S(a|g|r)*on,?,?,?,0.017,0
-1.txt,the,?,?,?,0.017,0
-1.txt,independence,?,?,?,0.017,0
-les_miserables.txt,(a|b)*a,?,?,?,0.017,0
-les_miserables.txt,Monsieur le maire,?,?,?,0.017,0
-les_miserables.txt,....a,?,?,?,0.017,0
+demo.txt,ab*a,14,4,3,0.023,3
+demo.txt,S(a|g|r)*on,28,7,4,0.025,2
+1.txt,the,0,0,0,0.027,233
+1.txt,independence,0,0,0,0.024,8
+les_miserables.txt,(a|b)*a,18,3,2,0.401,1340
+les_miserables.txt,Monsieur le maire,0,0,0,0.164,48
+les_miserables.txt,....a,14,6,6,0.405,1340

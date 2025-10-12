@@ -8,7 +8,7 @@ output_dir = "tests/outputs"
 os.makedirs(output_dir, exist_ok=True)
 
 # === Lecture du fichier CSV généré par run_tests.py ===
-csv_path = "results.csv"
+csv_path = os.path.join(output_dir, "results.csv")
 df = pd.read_csv(csv_path)
 
 # === Filtrage : ne garder que les lignes avec valeurs numériques ===

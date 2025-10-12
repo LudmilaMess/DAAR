@@ -1,0 +1,233 @@
+tests/1.txt:1:﻿The Project Gutenberg eBook of The Declaration of Independence of the United States of America
+tests/1.txt:3:This ebook is for the use of anyone anywhere in the United States and
+tests/1.txt:4:most other parts of the world at no cost and with almost no restrictions
+tests/1.txt:5:whatsoever. You may copy it, give it away or re-use it under the terms
+tests/1.txt:6:of the Project Gutenberg License included with this ebook or online
+tests/1.txt:7:at www.gutenberg.org. If you are not located in the United States,
+tests/1.txt:8:you will have to check the laws of the country where you are located
+tests/1.txt:11:Title: The Declaration of Independence of the United States of America
+tests/1.txt:23:*** START OF THE PROJECT GUTENBERG EBOOK THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA ***
+tests/1.txt:26:The United States Declaration of Independence was the first E-text
+tests/1.txt:27:released by Project Gutenberg, early in 1971. The title was stored
+tests/1.txt:29:hand mounted for retrieval.  The disk pack was the size of a large
+tests/1.txt:32:paper tape.  The 10,000 files we hope to have online by the end of
+tests/1.txt:41:documentation provided by the United States] to conclude that even
+tests/1.txt:42:“facsimiles” of the Declaration of Independence are nary identical
+tests/1.txt:43:to the original, nor of other “facsimiles.” There is a plethora of
+tests/1.txt:45:on the documents [which names I have left out].
+tests/1.txt:47:The resulting document has several misspellings removed from those
+tests/1.txt:51:[JT, Apr 2005: “Brittish” is spelled as in the original.]
+tests/1.txt:54:in the plain text version have been restored for the introduction.
+tests/1.txt:62:   NOTE: This file contains the original contents of the
+tests/1.txt:63:   very first eBook in the Project Gutenberg collection,
+tests/1.txt:64:   the Declaration of Independence. This file previously
+tests/1.txt:66:   it contained a duplicate of the Declaration - as part
+tests/1.txt:67:   of preserving the history of the contents which isn’t
+tests/1.txt:68:   necessary any longer. The historical variations of #1
+tests/1.txt:69:   are included in the “old” subdirectory accessed under
+tests/1.txt:70:   the “More Files” listing in the landing page for this
+tests/1.txt:73:   All of the original Project Gutenberg Etexts from the
+tests/1.txt:74:   1970’s were produced in ALL CAPS, no lower case.  The
+tests/1.txt:82:THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA
+tests/1.txt:87:The unanimous Declaration of the thirteen united States of America
+tests/1.txt:89:When in the Course of human events, it becomes necessary for one people
+tests/1.txt:90:to dissolve the political bands which have connected them with another,
+tests/1.txt:91:and to assume, among the Powers of the earth, the separate and equal
+tests/1.txt:92:station to which the Laws of Nature and of Nature’s God entitle them,
+tests/1.txt:93:a decent respect to the opinions of mankind requires that they should
+tests/1.txt:94:declare the causes which impel them to the separation.
+tests/1.txt:98:Rights, that among these are Life, Liberty, and the pursuit of
+tests/1.txt:100:among Men, deriving their just powers from the consent of the governed,
+tests/1.txt:102:ends, it is the Right of the People to alter or to abolish it, and to
+tests/1.txt:109:than to right themselves by abolishing the forms to which they are
+tests/1.txt:111:invariably the same Object evinces a design to reduce them under
+tests/1.txt:114:--Such has been the patient sufferance of these Colonies; and such is
+tests/1.txt:115:now the necessity which constrains them to alter their former Systems
+tests/1.txt:116:of Government. The history of the present King of Great Britain is a
+tests/1.txt:118:object the establishment of an absolute Tyranny over these States. To
+tests/1.txt:121:He has refused his Assent to Laws, the most wholesome and necessary for
+tests/1.txt:122:the public good.
+tests/1.txt:129:He has refused to pass other Laws for the accommodation of large
+tests/1.txt:130:districts of people, unless those people would relinquish the right
+tests/1.txt:131:of Representation in the Legislature, a right inestimable to them and
+tests/1.txt:135:uncomfortable, and distant from the depository of their Public Records,
+tests/1.txt:136:for the sole purpose of fatiguing them into compliance with his
+tests/1.txt:140:manly firmness his invasions on the rights of the people.
+tests/1.txt:143:others to be elected; whereby the Legislative Powers, incapable of
+tests/1.txt:144:Annihilation, have returned to the People at large for their exercise;
+tests/1.txt:145:the State remaining in the mean time exposed to all the dangers of
+tests/1.txt:148:He has endeavoured to prevent the population of these States; for that
+tests/1.txt:149:purpose obstructing the Laws of Naturalization of Foreigners; refusing
+tests/1.txt:150:to pass others to encourage their migration hither, and raising the
+tests/1.txt:153:He has obstructed the Administration of Justice, by refusing his Assent
+tests/1.txt:156:He has made judges dependent on his Will alone, for the tenure of their
+tests/1.txt:157:offices, and the amount and payment of their salaries.
+tests/1.txt:162:He has kept among us, in times of peace, Standing Armies without the
+tests/1.txt:165:He has affected to render the Military independent of and superior to
+tests/1.txt:166:the Civil Power.
+tests/1.txt:175:which they should commit on the Inhabitants of these States:
+tests/1.txt:177:For cutting off our Trade with all parts of the world:
+tests/1.txt:181:For depriving us, in many cases, of the benefits of Trial by Jury:
+tests/1.txt:185:For abolishing the free System of English Laws in a neighbouring
+tests/1.txt:188:for introducing the same absolute rule into these Colonies:
+tests/1.txt:191:altering fundamentally the Forms of our Governments:
+tests/1.txt:200:destroyed the lives of our people.
+tests/1.txt:203:to compleat the works of death, desolation and tyranny, already begun
+tests/1.txt:204:with circumstances of Cruelty & perfidy scarcely paralleled in the most
+tests/1.txt:205:barbarous ages, and totally unworthy of the Head of a civilized nation.
+tests/1.txt:207:He has constrained our fellow Citizens taken Captive on the high Seas
+tests/1.txt:208:to bear Arms against their Country, to become the executioners of their
+tests/1.txt:212:to bring on the inhabitants of our frontiers, the merciless Indian
+tests/1.txt:217:the most humble terms: Our repeated Petitions have been answered only
+tests/1.txt:219:act which may define a Tyrant, is unfit to be the ruler of a free
+tests/1.txt:225:of the circumstances of our emigration and settlement here. We have
+tests/1.txt:227:them by the ties of our common kindred to disavow these usurpations,
+tests/1.txt:229:They too have been deaf to the voice of justice and of consanguinity.
+tests/1.txt:230:We must, therefore, acquiesce in the necessity, which denounces our
+tests/1.txt:231:Separation, and hold them, as we hold the rest of mankind, Enemies in
+tests/1.txt:234:We, therefore, the Representatives of the United States of America,
+tests/1.txt:235:in General Congress, Assembled, appealing to the Supreme Judge of the
+tests/1.txt:236:world for the rectitude of our intentions, do, in the Name, and by the
+tests/1.txt:237:Authority of the good People of these Colonies, solemnly publish and
+tests/1.txt:240:the British Crown, and that all political connection between them and
+tests/1.txt:241:the State of Great Britain, is and ought to be totally dissolved; and
+tests/1.txt:245:the support of this Declaration, with a firm reliance on the Protection
+tests/1.txt:252:*** END OF THE PROJECT GUTENBERG EBOOK THE DECLARATION OF INDEPENDENCE OF THE UNITED STATES OF AMERICA ***
+tests/1.txt:257:Updated editions will replace the previous one—the old editions will
+tests/1.txt:260:Creating the works from print editions not protected by U.S. copyright
+tests/1.txt:262:so the Foundation (and you!) can copy and distribute it in the United
+tests/1.txt:264:royalties. Special rules, set forth in the General Terms of Use part
+tests/1.txt:266:Gutenberg™ electronic works to protect the PROJECT GUTENBERG™
+tests/1.txt:269:the terms of the trademark license, including paying royalties for use
+tests/1.txt:270:of the Project Gutenberg trademark. If you do not charge anything for
+tests/1.txt:271:copies of this eBook, complying with the trademark license is very
+tests/1.txt:275:do practically ANYTHING in the United States with eBooks not protected
+tests/1.txt:276:by U.S. copyright law. Redistribution is subject to the trademark
+tests/1.txt:282:THE FULL PROJECT GUTENBERG LICENSE
+tests/1.txt:286:To protect the Project Gutenberg™ mission of promoting the free
+tests/1.txt:288:(or any other work associated in any way with the phrase “Project
+tests/1.txt:289:Gutenberg”), you agree to comply with all the terms of the Full
+tests/1.txt:298:and accept all the terms of this license and intellectual property
+tests/1.txt:300:the terms of this agreement, you must cease using and return or
+tests/1.txt:304:by the terms of this agreement, you may obtain a refund from the person
+tests/1.txt:305:or entity to whom you paid the fee as set forth in paragraph 1.E.8.
+tests/1.txt:309:agree to be bound by the terms of this agreement. There are a few
+tests/1.txt:311:even without complying with the full terms of this agreement. See
+tests/1.txt:313:Gutenberg™ electronic works if you follow the terms of this
+tests/1.txt:317:1.C. The Project Gutenberg Literary Archive Foundation (“the
+tests/1.txt:318:Foundation” or PGLAF), owns a compilation copyright in the collection
+tests/1.txt:319:of Project Gutenberg™ electronic works. Nearly all the individual
+tests/1.txt:320:works in the collection are in the public domain in the United
+tests/1.txt:321:States. If an individual work is unprotected by copyright law in the
+tests/1.txt:322:United States and you are located in the United States, we do not
+tests/1.txt:324:displaying or creating derivative works based on the work as long as
+tests/1.txt:326:that you will support the Project Gutenberg™ mission of promoting
+tests/1.txt:328:works in compliance with the terms of this agreement for keeping the
+tests/1.txt:329:Project Gutenberg™ name associated with the work. You can easily
+tests/1.txt:330:comply with the terms of this agreement by keeping this work in the
+tests/1.txt:334:1.D. The copyright laws of the place where you are located also govern
+tests/1.txt:336:in a constant state of change. If you are outside the United States,
+tests/1.txt:337:check the laws of your country in addition to the terms of this
+tests/1.txt:340:other Project Gutenberg™ work. The Foundation makes no
+tests/1.txt:341:representations concerning the copyright status of any work in any
+tests/1.txt:342:country other than the United States.
+tests/1.txt:346:1.E.1. The following sentence, with active links to, or other
+tests/1.txt:347:immediate access to, the full Project Gutenberg™ License must appear
+tests/1.txt:349:on which the phrase “Project Gutenberg” appears, or with which the
+tests/1.txt:353:    This eBook is for the use of anyone anywhere in the United States and most
+tests/1.txt:354:    other parts of the world at no cost and with almost no restrictions
+tests/1.txt:355:    whatsoever. You may copy it, give it away or re-use it under the terms
+tests/1.txt:356:    of the Project Gutenberg License included with this eBook or online
+tests/1.txt:358:    are not located in the United States, you will have to check the laws
+tests/1.txt:359:    of the country where you are located before using this eBook.
+tests/1.txt:363:contain a notice indicating that it is posted with permission of the
+tests/1.txt:364:copyright holder), the work can be copied and distributed to anyone in
+tests/1.txt:365:the United States without paying any fees or charges. If you are
+tests/1.txt:366:redistributing or providing access to a work with the phrase “Project
+tests/1.txt:367:Gutenberg” associated with or appearing on the work, you must comply
+tests/1.txt:368:either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+tests/1.txt:369:obtain permission for the use of the work and the Project Gutenberg™
+tests/1.txt:373:with the permission of the copyright holder, your use and distribution
+tests/1.txt:375:additional terms imposed by the copyright holder. Additional terms
+tests/1.txt:376:will be linked to the Project Gutenberg™ License for all works
+tests/1.txt:377:posted with the permission of the copyright holder found at the
+tests/1.txt:380:1.E.4. Do not unlink or detach or remove the full Project Gutenberg™
+tests/1.txt:386:prominently displaying the sentence set forth in paragraph 1.E.1 with
+tests/1.txt:387:active links or immediate access to the full terms of the Project
+tests/1.txt:394:other than “Plain Vanilla ASCII” or other format used in the official
+tests/1.txt:395:version posted on the official Project Gutenberg™ website
+tests/1.txt:397:to the user, provide a copy, a means of exporting a copy, or a means
+tests/1.txt:398:of obtaining a copy upon request, of the work in its original “Plain
+tests/1.txt:399:Vanilla ASCII” or other form. Any alternate format must include the
+tests/1.txt:410:    • You pay a royalty fee of 20% of the gross profits you derive from
+tests/1.txt:411:        the use of Project Gutenberg™ works calculated using the method
+tests/1.txt:412:        you already use to calculate your applicable taxes. The fee is owed
+tests/1.txt:413:        to the owner of the Project Gutenberg™ trademark, but he has
+tests/1.txt:414:        agreed to donate royalties under this paragraph to the Project
+tests/1.txt:418:        payments should be clearly marked as such and sent to the Project
+tests/1.txt:419:        Gutenberg Literary Archive Foundation at the address specified in
+tests/1.txt:420:        Section 4, “Information about donations to the Project Gutenberg
+tests/1.txt:425:        does not agree to the terms of the full Project Gutenberg™
+tests/1.txt:427:        copies of the works possessed in a physical medium and discontinue
+tests/1.txt:432:        any money paid for a work or a replacement copy, if a defect in the
+tests/1.txt:434:        receipt of the work.
+tests/1.txt:443:from the Project Gutenberg Literary Archive Foundation, the manager of
+tests/1.txt:444:the Project Gutenberg™ trademark. Contact the Foundation as set
+tests/1.txt:451:works not protected by U.S. copyright law in creating the Project
+tests/1.txt:453:electronic works, and the medium on which they may be stored, may
+tests/1.txt:460:1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right
+tests/1.txt:461:of Replacement or Refund” described in paragraph 1.F.3, the Project
+tests/1.txt:462:Gutenberg Literary Archive Foundation, the owner of the Project
+tests/1.txt:468:PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+tests/1.txt:471:INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+tests/1.txt:476:receive a refund of the money (if any) you paid for it by sending a
+tests/1.txt:477:written explanation to the person you received the work from. If you
+tests/1.txt:478:received the work on a physical medium, you must return the medium
+tests/1.txt:479:with your written explanation. The person or entity that provided you
+tests/1.txt:480:with the defective work may elect to provide a replacement copy in
+tests/1.txt:481:lieu of a refund. If you received the work electronically, the person
+tests/1.txt:483:opportunity to receive the work electronically in lieu of a refund. If
+tests/1.txt:484:the second copy is also defective, you may demand a refund in writing
+tests/1.txt:485:without further opportunities to fix the problem.
+tests/1.txt:487:1.F.4. Except for the limited right of replacement or refund set forth
+tests/1.txt:493:warranties or the exclusion or limitation of certain types of
+tests/1.txt:495:violates the law of the state applicable to this agreement, the
+tests/1.txt:496:agreement shall be interpreted to make the maximum disclaimer or
+tests/1.txt:497:limitation permitted by the applicable state law. The invalidity or
+tests/1.txt:498:unenforceability of any provision of this agreement shall not void the
+tests/1.txt:501:1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+tests/1.txt:502:trademark owner, any agent or employee of the Foundation, anyone
+tests/1.txt:504:accordance with this agreement, and any volunteers associated with the
+tests/1.txt:508:the following which you do or cause to occur: (a) distribution of this
+tests/1.txt:513:Section 2. Information about the Mission of Project Gutenberg™
+tests/1.txt:515:Project Gutenberg™ is synonymous with the free distribution of
+tests/1.txt:516:electronic works in formats readable by the widest variety of
+tests/1.txt:518:exists because of the efforts of hundreds of volunteers and donations
+tests/1.txt:521:Volunteers and financial support to provide volunteers with the
+tests/1.txt:523:goals and ensuring that the Project Gutenberg™ collection will
+tests/1.txt:524:remain freely available for generations to come. In 2001, the Project
+tests/1.txt:527:generations. To learn more about the Project Gutenberg Literary
+tests/1.txt:529:Sections 3 and 4 and the Foundation information page at www.gutenberg.org.
+tests/1.txt:531:Section 3. Information about the Project Gutenberg Literary Archive Foundation
+tests/1.txt:533:The Project Gutenberg Literary Archive Foundation is a non-profit
+tests/1.txt:534:501(c)(3) educational corporation organized under the laws of the
+tests/1.txt:535:state of Mississippi and granted tax exempt status by the Internal
+tests/1.txt:536:Revenue Service. The Foundation’s EIN or federal tax identification
+tests/1.txt:537:number is 64-6221541. Contributions to the Project Gutenberg Literary
+tests/1.txt:538:Archive Foundation are tax deductible to the full extent permitted by
+tests/1.txt:541:The Foundation’s business office is located at 809 North 1500 West,
+tests/1.txt:543:to date contact information can be found at the Foundation’s website
+tests/1.txt:546:Section 4. Information about Donations to the Project Gutenberg
+tests/1.txt:551:increasing the number of public domain and licensed works that can be
+tests/1.txt:552:freely distributed in machine-readable form accessible by the widest
+tests/1.txt:555:status with the IRS.
+tests/1.txt:557:The Foundation is committed to complying with the laws regulating
+tests/1.txt:558:charities and charitable donations in all 50 states of the United
+tests/1.txt:563:DONATIONS or determine the status of compliance for any particular state
+tests/1.txt:567:have not met the solicitation requirements, we know of no prohibition
+tests/1.txt:573:outside the United States. U.S. laws alone swamp our small staff.
+tests/1.txt:575:Please check the Project Gutenberg web pages for current donation
+tests/1.txt:582:Professor Michael S. Hart was the originator of the Project
+tests/1.txt:590:the U.S. unless a copyright notice is included. Thus, we do not
+tests/1.txt:594:Most people start at our website which has the main PG search
+tests/1.txt:598:including how to make donations to the Project Gutenberg Literary

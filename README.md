@@ -115,13 +115,13 @@ Le script :
 ### Exemple de résultats
 | Fichier | Motif | NFA | DFA | DFAmin | Temps (s) | Lignes |
 |:--------|:------|----:|----:|-------:|-----------:|-------:|
-| demo.txt |ab*a | 14 | 4 | 3 | 0.024 | 3 |
+| demo.txt |ab*a | 14 | 4 | 3 | 0.023 | 3 |
 | demo.txt |S(a\|g\|r)*on | 28 | 7 | 4 | 0.025 | 2 |
-| 1.txt |the | 0 | 0 | 0 | 0.026 | 233 |
-| 1.txt |independence | 0 | 0 | 0 | 0.045 | 8 |
-| les_miserables.txt |(a\|b)*a | 18 | 3 | 2 | 0.410 | 1340 |
-| les_miserables.txt |Monsieur le maire | 0 | 0 | 0 | 0.166 | 48 |
-| les_miserables.txt |....a | 14 | 6 | 6 | 0.404 | 1340 |
+| 1.txt |the | 0 | 0 | 0 | 0.027 | 233 |
+| 1.txt |independence | 0 | 0 | 0 | 0.024 | 8 |
+| les_miserables.txt |(a\|b)*a | 18 | 3 | 2 | 0.401 | 1340 |
+| les_miserables.txt |Monsieur le maire | 0 | 0 | 0 | 0.164 | 48 |
+| les_miserables.txt |....a | 14 | 6 | 6 | 0.405 | 1340 |
 
 ---
 
