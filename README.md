@@ -66,6 +66,40 @@ tests/demo.txt:6:Sargon
 
 ---
 
+## Utilisation du Makefile
+
+Le projet inclut un **Makefile** permettant d’exécuter rapidement les tests et de créer l’archive finale du rendu.
+
+### Lancer tous les tests
+```bash
+make
+```
+### ou équivalent :
+```bash
+make test-all
+```
+
+### Exécuter uniquement les tests par automates
+```bash
+make test
+```
+### Exécuter uniquement les tests en mode KMP / Boyer–Moore
+```bash
+make test-kmp
+```
+### Nettoyer les fichiers temporaires
+```bash
+make clean
+```
+### Générer l’archive du rendu
+```bash
+make zip
+```
+
+Produit un fichier `daar-egrep-LiuYANG-LudmilaMessaoudi.zip` prêt à être soumis.
+
+---
+
 ## Tests automatisés
 
 Pour lancer tous les tests définis :
@@ -145,4 +179,5 @@ Trois fichiers sont créés dans `tests/outputs/` :
 - **Ludmila Messaoudi, Liu YANG**  
 Sorbonne Université - Master 2 Informatique Parcours Science et Technologie du Logiciel en alternance 
 
+**Date : Octobre 2025**
 Projet réalisé dans le cadre du module **DAAR (Développement et Analyse d’Algorithmes de Recherche)**.

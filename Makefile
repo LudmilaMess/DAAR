@@ -1,9 +1,11 @@
-# Makefile minimal pour le prototype Python
+# ==== Makefile minimal pour le prototype Python ====
 PY=python3
 APP=src/egrep_clone.py
-ZIPNAME=daar-projet-offline-NOM1-NOM2.zip
+ZIPNAME=daar-egrep-LiuYANG-LudmilaMessaoudi.zip
 
-.PHONY: test zip
+.PHONY: test test-kmp test-all clean zip
+
+.DEFAULT_GOAL := test-all
 
 # ==== Test général : expressions régulières ====
 test:
@@ -33,9 +35,14 @@ test-all: test test-kmp
 	@echo "== Tous les tests terminés (Automate + KMP) =="
 	@echo "==============================================="
 
+# ==== Nettoyage ====
+clean:
+	@echo "== Nettoyage des fichiers temporaires =="
+	@rm -rf __pycache__ tests/__pycache__ tests/outputs/*.png results.csv
+
 # ==== Archive finale ====
 zip:
 	@echo "== Archive du rendu =="
 	@rm -f $(ZIPNAME)
-	zip -r $(ZIPNAME) src/ tests/ report/ README.md Makefile
+	zip -r $(ZIPNAME) src/ tests/ README.md Makefile -x "tests/outputs/*"
 	@echo "Produit: $(ZIPNAME)"
